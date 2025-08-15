@@ -17,20 +17,21 @@ class BrutalForce_ReverseDigit{
 // Space Complexity: O(1)
 // not efficient for num to be in the range of int.
 class Optimised_ReverseDigit{
-    public int reverseO(int num){
+    public int reverseO(int x){
         int rev=0;
-        while(num!=0){
-            int temp=num%10;
-            if(rev > Integer.MAX_VALUE/10 || (rev==Integer.MAX_VALUE/10 && temp >7)){
+        while(x!=0){
+            int temp=x%10;
+
+            x=x/10;
+            if(rev > Integer.MAX_VALUE/10 || (rev== Integer.MAX_VALUE/10 && temp>7)){
                 return 0;
             }
-            else {
-                rev = rev * 10 + temp;
+            if(rev<Integer.MIN_VALUE/10 ||(rev==Integer.MIN_VALUE/10 && temp <-10)){
+                return 0;
             }
-            num=num/10;
+            rev=rev*10+temp;
         }
-            return rev;
-
+        return rev;
     }
 }
 public class ReverseDigit {
