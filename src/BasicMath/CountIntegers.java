@@ -18,6 +18,8 @@ class BrutalForce{
 // In the while loop we divide N by 10 until it becomes 0 which takes log10N iterations.
 // Space Complexity : O(1) as only a constant amount of additional memory for the counter regardless of size of the input number.
 
+
+//Optimised version
 class Optimised {
     public int cntInteger(int num){
         int count= (int)(Math.log10(num)+1);
