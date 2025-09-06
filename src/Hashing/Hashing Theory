@@ -1,0 +1,36 @@
+Hashing : is a way to store and find data quickly using key.
+        : a technique that uses a function i.e hah function to map data to a fixed position in a table .
+
+For Java,
+    - we can create an array of size 10^7(or even bugger like 10^8 if the heap allows).
+    - In java arrays are always on heap(created with new keyword).
+
+For Cpp,
+    - We can create an array of size 10^6 in the main function i.e locally.
+    - We can create an array of size 10^7 when we create it globally otherwise segmentation fault error.
+
+Hashing:
+
+    1. With Arrays
+            - Works when keys are integers and in small range.
+            - Adv:
+                * Very fast(O(1)access)
+                * Simple to implement
+            - DisAdv:
+                * Wastes memory if range id large.
+                * Only works with integer indices.
+
+    2. With HashMap(using key value pair)
+            - Works when keys are large,sparse or non integer.
+            - Adv:
+                * Works eith integers, string , char or even objects.
+                * Efficient
+                * Saves Memory
+            - DisAdv:
+                * Slightly slower tha arrays (bcoz of hashing and collisions).
+                * More memory overhead than arrays.
+
+Collisions:
+    1. Division Method - uses Linear Chaining
+    2. Folding Method
+    3. id square Method
